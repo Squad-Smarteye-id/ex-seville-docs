@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
+  "install": "Installation",
+  "getting": "Started",
   "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
