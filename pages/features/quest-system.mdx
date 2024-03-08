@@ -1,0 +1,45 @@
+import Image from 'next/image'
+
+# Quest System
+
+- **Overview**: This module or TODO list is crafted to organize, manage, and showcase a series of tasks or missions (quests) to the user. It typically encompasses features for tracking user progress, providing guidance or directions for each quest's completion, and delivering rewards or feedback once completed. There are two types of quests available: the first is a `**built-in quest**`, always stored in the application and accessible across all scenes. The second is the `**Partial Quest Canvas**`, which is specific to certain scenes and cases and is not accessible in other scenes.
+
+- **Adding Features**:
+    - **`(Build-in Quest)`** navigate to the GameObject 'Head Canvas' and observe the 'Head Canvas Controller' component. Check the 'Use Quest Canvas' variable to activate the Quest Canvas.
+        
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/q-system.png" alt="Quest System" width={700} height={700} />
+</div>
+
+    - **`(Partial Quest Canvas)`** This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘Partial Quest Canvas’ feature.
+    
+- **Setup Built-in Quest:** This feature integrates with several components such as **`QuestController`**, **`HeadCanvasController`**, and **`ScoreController`**, requiring you to configure these components to utilize it. Here are the steps to set up the **`Built-in Quest`** feature:
+    
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/q-system1.png" alt="Quest System" width={700} height={700} />
+</div>
+    
+1. Enable the **`Use Quest Canvas`** checkbox on the **`HeadCanvasController`** component.
+2. Use the **`Create DataManager`** button to create a new **`DataManager`**, which is used for storing task content or instructions for the player.
+3. To add content, open the **`DataManager`** file in the **`Assets/SEVILLE/My Data Manager`** folder and then add elements to the **`Quest List`**. The content includes:
+    - Icon Sprite: used to display an icon for instructions
+    - Title: the title of the task you are creating
+    - Description: a description of the task, including hints and other instructions
+    - Is Done: by default, this variable is set to false. It turns true when the player has completed the task.
+    - Done Message: this message appears when the player has completed the task you assigned
+    - Score: this score is linked with the **`ScoreController`** component, with the score value being added by the amount you specify. Set the **`Player Max Score`** variable to limit the score value for the player.
+4. Use the **`FinishItem`** function on the **`QuestController`** component to change the "Is Done" condition to true, indicating that the player has completed the task. The **`FinishItem`** function requires one argument, which is the index of the element in the **`Quest List`**.
+5. You can use **`OnScoreFinished`** in **`ScoreController`** components to trigger conditions when the player has reached the maximum score.
+
+- **Setup Partial Quest:** When using 'Partial Quest', add quest items to the 'ToDoList' variable list. Then, set the values for Title, Description, and Done Message (the message displayed after an item is completed). Besides content, you also need to link the 'head canvas component' to the Head Canvas variable in the 'Partial Quest Controller', which is used to display done messages.
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/q-system2.png" alt="Popup Canvas" width={400} height={400} />
+  <Image src="/features/q-system3.png" alt="Popup Canvas" width={400} height={400} />
+</div>
+
+    - **Partial Quest Behaviour:**
+        - Variable `**IsPlayOnStart**`: If set to true, the quest will open at the start of runtime; if not, it will hide the UI panel.
+        - The `**OpenQuest**` function in the component can be used to open the quest panel.
+        - The `**FinishItem**` function is for completing items in the quest. You will need to provide an argument referencing the target item to be completed.
+        - The Unity Event `**On Quest Finished**` is triggered when the player completes all quests, or when the isDone value for each item is true.

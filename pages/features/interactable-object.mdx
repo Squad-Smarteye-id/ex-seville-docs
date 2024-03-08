@@ -1,0 +1,27 @@
+import Image from 'next/image'
+
+# Interactable Object
+
+- **Overview**: Interactable Object (Cube-Based) is utilized to create objects that can interact with the player, such as holding and placing objects. An Interactable Object is a cube-based object that can be held. To add a new object, you can make the new object a child of the cube-based Object and configure attachment settings to adjust its position when the player holds the object.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘Interactable Object’ prefab.
+- **Setup**:
+    - Ensure that the cube-based object is a GameObject assigned to the 'Interactable' layer.
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/i-object.png" alt="area trigger" width={700} height={700} />
+</div>
+    - To configure interaction methods, adjust the 'Interaction Layer Mask'. 'Direct Interaction' is for direct hand-based interactions, such as holding the object, while 'Ray Interaction' is used for interacting with objects using a Ray Interactor.
+    - If your project lacks the two specified ‘Interaction Layer Masks’, you can add them manually by selecting ‘Add Layer’. Then, assign ‘Direct Interaction’ to layer 29 and ‘Ray Interaction’ to layer 30. Following this, check the layer mask in the component.
+    - You can assign a name to the object in the 'Obj Name' variable. This name will be used by the socket manager to filter objects that can be accepted by the socket.
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/i-object1.png" alt="area trigger" width={700} height={700} />
+</div>
+    - To set up attachments, adjust the Transform position and rotation values of the 'Right Attach' and 'Left Attach' GameObjects.
+- **Add 3D Asset**:
+    - To add a new object, insert an FBX object as a child of the Object prefab, then adjust the object's size and position. Remember to set up the box collider to match the trigger area. To hide the cube's mesh, you can disable the mesh renderer.
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/i-object3.png" alt="area trigger" width={700} height={700} />
+</div>
+    - You can adjust the transform on the object attachment if you want to change hand positions when the player grips an object.
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/i-object4.png" alt="area trigger" width={700} height={700} />
+</div>

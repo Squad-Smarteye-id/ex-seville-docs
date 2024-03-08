@@ -1,0 +1,21 @@
+import Image from 'next/image'
+
+# Teleportation Anchor
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/teleport.png" alt="Teleport" width={700} height={700} />
+</div>
+
+- **Overview**: The "TeleportationAnchor" component is designed to facilitate instant user movement to a predetermined location within a VR scene. This is especially useful for quick navigation in expansive virtual environments or for avoiding motion sickness commonly associated with virtual movement. Its primary function is to enable users to teleport to specific locations within the virtual environment.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘TELEPORTATION ANCHOR’ prefab.
+- **Setup**:
+    
+    
+    - "Match Orientation" is a setting that determines the player's facing direction after teleportation. The "Target Up And Forward" option aligns the player to face forward based on the anchor's direction upon arrival at the destination. This ensures that after teleporting, the player is facing the correct direction in accordance with the game or VR environment design. You can adjust this to suit your application's needs.
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/teleport1.png" alt="Teleport" width={300} height={300} />
+</div>
+
+    - You can customize the shape and material by modifying the 'mesh renderer' component.
+    - Use 'Interactable Events' to monitor actions performed by the player.

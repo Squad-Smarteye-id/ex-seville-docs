@@ -1,0 +1,22 @@
+# Seville Package v2.0
+
+**Feature Updates:**
+
+- **Popup Canvas:** Now, you can add photos and text through the 'Popup Controller' component, eliminating the previous requirement for manual content modification.
+- **Quiz:** Added a function for resetting quiz data during runtime.
+- **Navigation System:** All settings related to the index of the target area can be adjusted from the inspector. Developers only need to call the move function through an event.
+- **(New) Load Tags and Layers:** This feature is useful when tags and layers are missing after importing a package. It can be accessed through the installer dashboard.
+- **(New) GUI Prefabs Instantiator:** A feature for adding assets through a GUI window to facilitate feature development.
+- **(New) Character Locomotion for VR 3D:** A character that can perform continuous movement and teleport to specific areas.
+- **(New) Quest System:** A system that holds a to-do list for players, which can also integrate with the score manager.
+- **(New) Scoring System:** A scoring system that calculates the player's score.
+- **(New) Poke Button:** A button that can be pressed by players, with developer access to player actions through 'unity events'.
+- **(New) Door Interaction:** A prefab for creating doors that can open and close like in real life.
+- **(New) Ladder Object:** A prefab used to create ladder simulations.
+
+**Bug Fixes:**
+
+- **Sound Manager:** Fixed an issue where the background sound remained on when the video player was activated.
+- **Environment Manager VR360:** Corrected the issue where the player remained in the last area before exiting the game instead of returning to the starting area.
+- **Variable List in Environment Manager and Area Handler:** Updated the item list automatically when a GameObject is removed.
+- **Quiz:** Fixed a problem with the unity event OnFinishedQuiz, which previously did not invoke properly.

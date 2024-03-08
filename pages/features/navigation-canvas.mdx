@@ -1,0 +1,22 @@
+import Image from 'next/image'
+
+# Navigation Canvas
+
+- **Overview**: The Navigation Canvas is a feature that enables navigation through different areas or scenes based on their respective area or scene index.
+- **Adding This Feature**: You can add this feature by clicking the ‘Add Features’ button found in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector and selecting the ‘Navigation Canvas’ prefab.
+- **Setup:**
+    - Input the index of the desired target area in the 'Target Next Scene or Area' variable.
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/Navigation.png" alt="Navigation" width={700} height={700} />
+</div>
+
+- **Behaviour**:
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/navigation1.png" alt="Navigation" width={700} height={700} />
+</div>
+    There are two functions available. Choose the function to be used via the `**OnClick()**` event on the button component. The following are the two available functions:
+
+    - `**OnClickChangeAreaVR360()**` is used for changing areas in VR 360 projects.
+    - `**OnClickChangeScene()**` is used for switching scenes.

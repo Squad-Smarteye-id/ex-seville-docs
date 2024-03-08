@@ -1,0 +1,17 @@
+# Audio Manager
+
+- **Overview** : Centralized audio management for VR, controlling background sounds, soung effects, and video audio.
+- **Feature Configuration :** By default, the **`AudioManager`** is included when you add a starter project. This component consists of two List variables that hold Audio Clips (Music and SFX Sounds). The audio clips in the Music Sounds variable will be played on a loop across all scenes, while the audio clips in the SFX Sounds variable will be played using **`PlayOneShot`**.
+
+import Image from 'next/image'
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/audio-manager.png" alt="audio manager" width={700} height={700} />
+</div>
+
+- **Behaviour**:
+    - Name one of the clips as a "Theme" if you want to play music on the **`OnStart()`** event.
+    - **`PlayBackgroundMusic(clipName)`**: Plays an audio clip from the **`Music Sounds`** list.
+    - **`PlaySFX(clipName)`**: Plays an audio clip from the **`SFX Sounds`** list.
+    - **`MuteMusic()`**: Turns off the **`Audio Source`** component to stop playing audio clips from the **`Music Sounds`** list.
+    - **`UnmuteMusic()`**: Turns on the **`Audio Source`** component to resume playing audio clips from the **`Music Sounds`** list.

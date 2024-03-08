@@ -1,0 +1,27 @@
+import Image from 'next/image'
+
+# Virtual Keyboard
+
+- **Overview :** The "Virtual Keyboard" in VR is a visual representation of a keyboard that allows users to type text within a virtual environment or onto a canvas using controllers. This feature enhances user interaction by providing a method to input text without needing a physical keyboard, making it ideal for applications such as messaging, data entry, and search functionalities within VR experiences.
+- **Adding Features** : This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘INPUT FIELD CANVAS (VIRTUAL KEYBOARD)’ prefab.
+- **Behaviour** :
+    - Please use the Unity event **`OnGetKeyboardOutput`** on the **`Keyboard Controller`** component to retrieve the string value when the user presses the enter button or executes the submit function.
+        
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/virtual-keyboard.png" alt="Virtual Keyboard" width={700} height={700} />
+</div>
+        
+    - Assign the Transform of the character's camera to the variable **`position Cam`** so that the rotation of the canvas will always face towards the player's camera position. This ensures that the canvas, such as a UI or virtual keyboard, remains in the player's field of view, enhancing usability and interaction within the virtual environment.
+        
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/virtual-keyboard.png" alt="Virtual Keyboard" width={700} height={700} />
+</div>
+        
+    - The Seville package now offers a receiver function within the KeyboardToTMProUGUI component for displaying outcomes in `**TextMeshProUGUI**`. Add the **`KeyboardToTMProUGUI`** component through the inspector, connect it to the **`TextMeshProUGUI`** component, and call the **`EventStringReceiver()`** function through the Unity Event **`OnGetKeyboardOuput()`** in the **`KeyboardController`** component.
+    - The Seville package has provided a receiver function within the **`KeyboardToTMProUGUI`** component that can be used to display the results in **`TextMeshProUGUI`**. Add the **`KeyboardToTMProUGUI`** component through the inspector, then link the **`TextMeshProUGUI`** component, and call the **`EventStringReceiver()`** Dynamic string function through the Unity Event **`OnGetKeyboardOutput()`** on the **`KeyboardController`** component.
+        
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/virtual-keyboard1.png" alt="Virtual Keyboard" width={700} height={700} />
+</div>
+        
+    - You can use the **`virtual keyboard`** with other canvas components outside the prefab using the **`KeyboardController`** component. Turn off GameObject Canvas if not needed.

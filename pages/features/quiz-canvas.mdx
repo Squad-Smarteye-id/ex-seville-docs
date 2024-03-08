@@ -1,0 +1,23 @@
+import Image from 'next/image'
+
+# Quiz Canvas
+
+- **Overview**: A component that provides an interactive quiz, featuring real-time scoring, illustrative photos for each question, and intuitive answer choices, ideal for VR educational and training applications.
+- **Adding This Feature:** This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘Quiz Canvas’ prefab.
+- **Add a question**:
+    
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/q-canvas.png" alt="Quiz Canvas" width={700} height={700} />
+</div>
+    
+    - Configure data by accessing the ‘Quiz Handler’ class.
+    - Add new elements to the ‘Quiz Content List’ variable list to create questions and answers (max 4 option).
+    - Use the ‘true box’ checkbox to validate correct answers.
+- **Behaviour**:
+    - The ‘PlayOnStart’ condition is available to initiate and display the quiz at the start.
+    - The Unity event ‘After Dialog Finish’ is triggered when the player has answered the quiz.
+    - Restart Quiz: To restart the quiz, use the function in the ‘Quiz Controller’ component and call the ‘ResetQuiz’ function to reset the quiz questions and answers to their initial state.
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/q-canvas1.png" alt="Quiz Canvas" width={700} height={700} />
+</div>

@@ -1,0 +1,21 @@
+import Image from 'next/image'
+
+# Build Settings Suggestion for Oculus Quest 2
+
+### **Change the Platform to Android**
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/build/build.png" alt="Hello" width={500} height={500} />
+</div>
+
+To change the target platform to Android in Build Settings, go to File Menu > Build Settings, select Android, and click 'Switch Platform'.
+
+### **Setup Player Settings**
+
+In Unity's Project Settings for the player:
+
+- **Color Space:** Set to 'Linear' for accurate lighting and shading.
+- **Texture Compression Format:** Choose 'ASTC' for high-quality, efficient texture compression.
+- **Minimum API Level:** Set to 'Android 6.0 'Marshmallow' (API level 23)' for compatibility.
+- **Scripting Backend:** Select 'IL2CPP' for performance and C++ integration.
+- **Target Architectures:** Opt for 'ARMv7' or 'ARM64' based on device compatibility.

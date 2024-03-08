@@ -1,0 +1,15 @@
+import Image from 'next/image'
+
+# Popup Canvas
+
+- **Overview**: The ‘Popup Canvas’ is designed to display information in the form of photos and descriptive text.
+- **Adding This Feature**: This feature can be added by clicking the ‘Add Features’ button located in the `**EnvAreaHandler**` (VR360) or `**EnvironmentAreaManagerVR3D**` (VR3D) component in the inspector, and then selecting the ‘Popup Canvas’ prefab.
+- **Setup:**
+    - You can insert various content items like photos and text through variables in the ‘Content Pop-up’ section.
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/popup.png" alt="Popup Canvas" width={700} height={700} />
+</div>
+
+    - By default, the image component is set to display photos with dimensions of 960 x 540. To modify this, adjust the width and height in the ‘Rect transform’ component of the child GameObject named ‘Target Image’.
+    - To alter the UI appearance, first adjust the position of the ‘panel’ GameObject. Change the Y position value to 0 to view the panel after updating the display by inserting UI assets into the image component. Then revert to the original Y position, which is -1080.

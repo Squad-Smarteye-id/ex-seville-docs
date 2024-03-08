@@ -1,0 +1,15 @@
+# Area Trigger
+
+- **Overview**: The Area Trigger is a trigger created using the **`Box Collider`** component. This feature can be used as a sensory component to detect GameObjects based on the GameObject Tag.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘(Logic) Area Trigger’ prefab.
+- **Behaviour**:
+
+import Image from 'next/image'
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/arear-trigger.png" alt="area trigger" width={700} height={700} />
+</div>
+
+    - The **`OnPlayerEnter`** event is invoked when the target GameObject enters the area trigger.
+    - The **`OnPlayerStay`** event is invoked when the target Game Object continually remains within the area trigger.
+    - The `**OnPlayerExit**` event is invoked when the target Game Object exits the area trigger.

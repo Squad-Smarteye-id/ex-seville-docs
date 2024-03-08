@@ -1,0 +1,15 @@
+import Image from 'next/image'
+
+# Video Player Canvas
+
+- **Overview**: The ‘Video Player Canvas’ is designed to display videos and features controls such as play, pause, next, and reverse buttons. It is highly recommended to use videos of 1080p 30fps quality for optimal performance.
+- **Adding This Feature**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘Video Player Canvas’ feature.
+- **Setup:**
+    
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/video.png" alt="Video Player Canvas" width={700} height={700} />
+</div>
+    
+    - Insert a video clip into the Video Clip variable in the ‘VideoPlayerController’ component.
+    - The ‘OnVideoFinished()’ Unity event is invoked when the video has finished playing.
+    - The 'HideScreenControllerTime' variable is used to set the time for the controller's display to disappear, counted from the last time the raycast leaves the canvas.

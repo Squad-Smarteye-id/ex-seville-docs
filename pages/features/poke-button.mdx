@@ -1,0 +1,16 @@
+import Image from 'next/image'
+
+# Poke Button
+
+- **Overview**: This feature enables users to easily press buttons in the virtual world using VR controllers, making their interactions feel more realistic and intuitive. The feature adds visual and haptic feedback to mimic the experience of pressing a physical button.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘DOOR INTERACTION’ prefab.
+- **Behaviour**:
+    
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/Poke-button.png" alt="area trigger" width={700} height={700} />
+</div>
+    - **Event Hover**: This event is triggered when users hover their controllers close to an interactive object. It's typically used to provide visual or audio feedback, like changing the object’s color or displaying visual effects, to indicate that the object is interactable.
+    - **Event Select**: This event occurs when the user performs an action to 'select' or activate the interactive object, often by pressing a button on the VR controller. This event can be used to initiate specific actions on the object, such as triggering a mechanism or starting an animation.
+    - **Event Activate**: Similar to Event Select, but often used for more specific or complex interactions, like activating a tool or mechanism in the application.
+    - **Event Deactivate**: The opposite of Event Activate, this event is triggered when the user stops interacting with or deactivates the object, which can be used to stop ongoing actions or animations.
+    - **Event Focus**: This event occurs when an object gains the 'focus' of the user, possibly through gaze or direction of view. It is often used to display additional information or special effects when the object becomes the focal point of the user’s attention.

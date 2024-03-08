@@ -1,0 +1,20 @@
+import Image from 'next/image'
+
+# Socket Interactor
+
+- **Overview**: is a technical feature that enables virtual objects to be 'connected' to specific positions, facilitating more complex and precise interactions.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvAreaHandler’ (VR360) or ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘Socket Interactor’ prefab.
+- **Setup**:
+    - You can enter the 'Obj Name' values into the 'Target Obj Names' variable list. The objects that can be captured by this socket will correspond to the names entered in the 'XRGrabInteractableTwoAttach' component.
+        
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/socket.png" alt="Socket Interactor" width={700} height={700} />
+</div>
+        
+    - You can also set the position of the placed object by modifying the Transform values of the 'SocketAttach' GameObject.
+    - To change the appearance of the default sphere-shaped marker, you can alter the target mesh in the 'Mesh Filter' component. Change the material in the 'Mesh Renderer' component to modify the default color, and disable the mesh renderer if you prefer the marker to be invisible.
+    - The socket object includes a 'Sphere Collider' component, serving as a trigger area to detect incoming objects. You can adjust the range of this area by modifying the collider component.
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/socket1.png" alt="Socket Interactor" width={700} height={700} />
+</div>

@@ -1,0 +1,14 @@
+import Image from 'next/image'
+
+# Door Interaction
+
+- **Overview**: This feature is designed to facilitate realistic interactions with doors in a virtual environment. It enables users to open and close doors using VR controllers. Designed for smooth and responsive operation, this feature enhances the immersive experience by giving users greater control over their virtual environment.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘DOOR INTERACTION’ prefab.
+- **Setup**:
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/door-interaction.png" alt="area trigger" width={700} height={700} />
+</div>
+
+- The door mechanism is constructed using the 'Hinge Joint' component to control the door's rotation. You can set the rotation limits by adjusting the minimum and maximum values.
+- If you wish to replace the existing asset, simply change the mesh of the GameObject and adjust its scaling and position accordingly.

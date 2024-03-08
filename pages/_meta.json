@@ -1,8 +1,10 @@
 {
   "index": "Introduction",
   "install": "Installation",
-  "getting": "Started",
-  "advanced": "Advanced (A Folder)",
+  "getting": "Getting Started",
+  "build": "Build Settings",
+  "features": "Features",
+  "Version": "Version Notes",
   "about": {
     "title": "About",
     "type": "page"

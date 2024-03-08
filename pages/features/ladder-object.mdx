@@ -1,0 +1,11 @@
+import Image from 'next/image'
+
+# Ladder Object
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Image src="/features/ladder.png" alt="ladder object" width={400} height={400} />
+</div>
+
+- **Overview**: The "Ladder" feature in this VR plugin provides an easy and natural way for users to interact with ladders in a virtual world. With this feature, users can climb up or down ladders in VR applications, adding an extra dimension to navigation and exploration in your virtual environment. This feature is designed to intuitively respond to user movements, making the ladder-climbing experience feel more realistic.
+- **Adding Features**: This feature can be added by clicking the ‘Add Features’ button located in the ‘EnvironmentAreaManagerVR3D’ (VR3D) component in the inspector, and then selecting the ‘LADDER’ prefab.
+- **Behaviour**: The object features a collider that detects when a hand touches a ladder rung, changing the material's color when the player attempts to hover over it with their hand. Once it detects the player's hand, the ladder can alter the character's position as the player grips the rung.
