@@ -5,14 +5,10 @@
   "build": "Build Settings",
   "features": "Features",
   "Version": "Version Notes",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://api.whatsapp.com/send/?phone=62811898211&text&app_absent=0",
     "newWindow": true
   }
 }
